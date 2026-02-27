@@ -1,0 +1,21 @@
+[project]
+name = "gemini-navigator"
+version = "0.1.0"
+description = "Universal web navigator agent using Gemini vision + Playwright"
+requires-python = ">=3.11"
+dependencies = [
+    "google-genai>=1.0.0",
+    "playwright>=1.40.0",
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    "pillow>=10.0.0",
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
